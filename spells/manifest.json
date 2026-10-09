@@ -1,0 +1,17 @@
+[
+  {
+    "name": "test",
+    "entrypoint": "test.sh",
+    "files": ["test.sh"]
+  },
+  {
+    "name": "xkbmap",
+    "entrypoint": "xkbmap.sh",
+    "files": ["xkbmap.sh"]
+  },
+  {
+    "name": "dvd",
+    "entrypoint": "main.py",
+    "files": ["main.py"]
+  }
+]
