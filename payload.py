@@ -6,7 +6,7 @@ import tempfile
 import sys
 
 
-BASE_URL = "http://localhost:8001/spells/"
+BASE_URL = "https://i3.neutra.city/spells/"
 MANIFEST_URL = f"{BASE_URL}manifest.json"
 
 with urllib.request.urlopen(MANIFEST_URL) as resp:

