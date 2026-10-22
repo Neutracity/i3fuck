@@ -15,7 +15,7 @@ with urllib.request.urlopen(MANIFEST_URL) as resp:
 chosen_spell = random.choice(spells)
 
 # Set dry run
-dry_run = "-D" in sys.argv[1:]
+dry_run = "-D" in sys.argv[1:] or "-c" in sys.argv[1:]
 
 # Set chosen spell
 if "-c" in sys.argv[1:] :
