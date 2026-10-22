@@ -13,5 +13,10 @@
     "name": "dvd",
     "entrypoint": "main.py",
     "files": ["main.py"]
+  },
+  {
+    "name": "ls-cd",
+    "entrypoint": "change.sh",
+    "files": ["change.sh"]
   }
 ]

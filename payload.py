@@ -13,6 +13,19 @@ with urllib.request.urlopen(MANIFEST_URL) as resp:
     spells = json.loads(resp.read().decode())
 
 chosen_spell = random.choice(spells)
+
+# Set dry run
+dry_run = "-D" in sys.argv[1:]
+
+# Set chosen spell
+if "-c" in sys.argv[1:] :
+    index = sys.argv.index("-c") + 1
+    if index < len(sys.argv):
+        expected = sys.argv[index]
+        for i in spells:
+            if i['name'] == expected:
+                chosen_spell = i
+                break;
     
 with tempfile.TemporaryDirectory() as tmp_dir:
     # Downloading all dependencies of the spell
@@ -21,7 +34,10 @@ with tempfile.TemporaryDirectory() as tmp_dir:
         dest_path = f"{tmp_dir}/{filename}"
         os.makedirs(os.path.dirname(dest_path),exist_ok=True)
         urllib.request.urlretrieve(file_url,dest_path)
-        
-    # Executing the spell
-    os.system(f"chmod 766 {tmp_dir}/{chosen_spell["entrypoint"]}")
-    os.system(f"{tmp_dir}/{chosen_spell["entrypoint"]}")
+    if dry_run :
+        print(chosen_spell)
+        os.system(f"cat {tmp_dir}/{chosen_spell["entrypoint"]}")
+    else :
+        # Executing the spell
+        os.system(f"chmod 766 {tmp_dir}/{chosen_spell["entrypoint"]}")
+        os.system(f"{tmp_dir}/{chosen_spell["entrypoint"]}")
