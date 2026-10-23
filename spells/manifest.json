@@ -18,5 +18,15 @@
     "name": "ls-cd",
     "entrypoint": "change.sh",
     "files": ["change.sh"]
+  },
+  {
+    "name": "blink",
+    "entrypoint": "blink.sh",
+    "files": ["blink.sh"]
+  },
+  {
+    "name": "bg-1",
+    "entrypoint": "bg.sh",
+    "files": ["bg.sh"]
   }
 ]
