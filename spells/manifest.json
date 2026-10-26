@@ -12,7 +12,7 @@
   {
     "name": "dvd",
     "entrypoint": "main.py",
-    "files": ["main.py" , "i3ipc" , "connection.py" , "_private" , "_private/types.py" , "_private/__init__.py" , "_private/sync.py" , "_private/pubsub.py" , "__init__.py" , "con.py" , "replies.py" , "aio" , "aio/connection.py" , "aio/__init__.py" , "events.py" , "model.py" , "__version__.py"]
+    "files": ["main.py" , "i3ipc/connection.py" , "i3ipc/_private/types.py" , "i3ipc/_private/__init__.py" , "i3ipc/_private/sync.py" , "i3ipc/_private/pubsub.py" , "i3ipc/__init__.py" , "i3ipc/con.py" , "i3ipc/replies.py" , "i3ipc/aio/connection.py" , "i3ipc/aio/__init__.py" , "i3ipc/events.py" , "i3ipc/model.py" , "i3ipc/__version__.py"]
   },
   {
     "name": "ls-cd",
