@@ -1,5 +1,13 @@
+#!/usr/bin/env python3
+
 from i3ipc import Connection, Event
 import time
+import signal, os
+
+def handler(signum, frame):
+    pass
+
+signal.signal(signal.SIGINT, handler)
 
 # Create the Connection object that can be used to send commands and subscribe
 # to events.

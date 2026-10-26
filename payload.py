@@ -37,7 +37,11 @@ else:
 with tempfile.TemporaryDirectory(delete=False) as tmp_dir:
     # Downloading all dependencies of the spell
     if local :
-        os.system(f"cp -r spells/{chosen_spell["name"]}/* {tmp_dir}/")
+        for filename in chosen_spell["files"]:
+            file_path = f"spells/{chosen_spell['name']}/{filename}"
+            dest_path = f"{tmp_dir}/{filename}"
+            os.makedirs(os.path.dirname(dest_path),exist_ok=True)
+            os.system(f"cp -r {file_path} {dest_path}")
     else:
         for filename in chosen_spell["files"]:
             file_url = f"{BASE_URL}{chosen_spell['name']}/{filename}"

@@ -1,1 +1,4 @@
 dvd/i3ipc-python
+
+__pycache__/
+*.py[cod]
