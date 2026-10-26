@@ -47,6 +47,7 @@ with tempfile.TemporaryDirectory(delete=False) as tmp_dir:
             file_url = f"{BASE_URL}{chosen_spell['name']}/{filename}"
             dest_path = f"{tmp_dir}/{filename}"
             os.makedirs(os.path.dirname(dest_path),exist_ok=True)
+            print(f"actual request: {file_url} ")
             urllib.request.urlretrieve(file_url,dest_path)
     if dry_run :
         print(chosen_spell)
